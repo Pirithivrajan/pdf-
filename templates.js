@@ -6,7 +6,7 @@ router.post("/", auth, async (req, res) => {
   const tpl = await Template.create({
     userId: req.user.id,
     name: req.body.name,
-    fields: req.body.fields
+    layout: req.body.layout
   });
   res.json(tpl);
 });
